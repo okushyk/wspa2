@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %} Order Detail {% endblock %}
+
+{% block body %}
+
+
+<div class ='col-sm-6 col-sm-offset-3'>
+  <strong><p style="color: red">Twoja rezerwacja została pomyślnie wykonana. Wkrótce skontaktujemy się z Tobą w sprawie Twojej rezerwacji. Dane Twojej rezerwacji znajdują się poniżej
+  </p></strong>
+  <p class="list-group-item active">
+    <strong><span class="glyphicon glyphicon-tag"></span> Booking Detail</strong>
+  </p>
+   <a href="" class="list-group-item"><strong>Nazwa samochodu: </strong>{{detail.car_name}}</a>
+  <a href="" class="list-group-item"><strong>Imię i nazwisko pracownika: </strong>{{detail.employee_name}}</a>
+  <a href="" class="list-group-item"><strong>Nr telefonu: </strong>{{detail.cell_no}}</a>
+  <a href="" class="list-group-item"><strong>Adres: </strong>{{detail.address}}</a>
+  <a href="" class="list-group-item"><strong>Z: </strong>{{detail.date}}</a>
+  <a href="" class="list-group-item"><strong>Do: </strong>{{detail.to}}</a>
+  <a href="" class="list-group-item"><strong>Identyfikator zamówienia: </strong>{{detail.id}}</a><br>
+  <div class="pull-right">
+    <a href="{% url 'order_edit' detail.id %}"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-pencil"></span> Edytuj rezerwację</button></a>
+    <a href="{% url 'order_delete' detail.id %}"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-pencil"></span> Anulować rezerwację</button></a>
+    <a href=""><button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span> Wydrukować</button></a>
+
+  </div>
+</div>
+
+{% endblock %}

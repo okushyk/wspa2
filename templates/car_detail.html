@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% block title %} Detail of {{detail.car_name}} {% endblock %}
+
+{% block body %}
+
+{% block search %}
+{% endblock %}
+
+
+
+<div class ='col-sm-6 col-sm-offset-3'>
+  <div class="list-group-item active">
+    <strong><span class="glyphicon glyphicon-film"></span> Szczegóły samochodu</strong>
+  </div>
+  {% if detail.image %}
+  <img src='{{ detail.image.url }}' class="img-responsive"/>
+  {% endif %}
+  <a href="" class="list-group-item"><strong>Nazwa samochodu: </strong>{{detail.car_name}}</a>
+  <a href="" class="list-group-item"><strong>Nazwa firmy   : </strong>{{detail.company_name}}</a>
+  <a href="" class="list-group-item"><strong>Liczba miejsc   : </strong>{{detail.num_of_seats}}</a>
+  <a href="" class="list-group-item"><strong>Koszt na dzień   : </strong>{{detail.cost_par_day}}</a>
+  <a href="" class="list-group-item"><strong>Like   : </strong>{{detail.like}}</a>
+  <a href="" class="list-group-item"><strong>Inne informacje   : </strong>{{detail.content}}</a><br>
+  <div class="pull-right">
+    <a href="{% url 'newcar' %}"><button type="button" class="btn btn-info"><span class="glyphicon glyphicon-list"></span> Nowo dodany samochód</button></a>
+    <a href="{% url 'order_create' %}"><button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span> Zarezerwować</button></a>
+    
+<hr>
+  </div>
+
+</div>
+
+{% endblock %}

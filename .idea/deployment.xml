@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="https://github.com/okushyk/wspa2.git" uploadOnCheckin="4987caa9-177c-4cb4-93af-67c05721359f" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="https://github.com/okushyk/wspa2.git">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+    <option name="myUploadOnCheckinName" value="https://github.com/okushyk/wspa2.git" />
+  </component>
+</project>
